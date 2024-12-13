@@ -1,0 +1,724 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Yanone+Kaffeesatz:wght@200..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.fs-1,
+.fs-2,
+.fs-3,
+.fs-4,
+.fs-5,
+.fs-6 {
+    font-family: dosis;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #ddd;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 1.1rem;
+    font-weight: 800;
+}
+
+h4 {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+h5 {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #1B1A17;
+}
+
+h6 {
+    color: #F0E3CA;
+}
+
+.btn {
+    background-color: #8bc34a;
+    color: white;
+    border: none;
+    font-weight: 500;
+    border-radius: 20px;
+}
+
+.btn:hover {
+    background-color: #639e10;
+    color: white;
+}
+
+
+
+.navbar {
+    background-color: transparent;
+    margin: 20px;
+    padding: 10px 20px;
+}
+
+.navbar .container {
+    background-color: white;
+    border-radius: 20px;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    padding: 0;
+}
+
+.navbar-brand img {
+    height: 40px;
+    margin-right: 10px;
+
+}
+
+.navbar-nav .nav-link {
+    color: black;
+    font-weight: 500;
+    margin-right: 20px;
+}
+
+.cart {
+    display: flex;
+    align-items: center;
+    color: black;
+    font-weight: 500;
+}
+
+.cart .badge {
+    background-color: #8bc34a;
+    color: white;
+    margin-left: 5px;
+}
+
+.navbar-nav .nav-link,
+.nav-item i {
+    padding: 0 20px;
+    color: black;
+    transition: 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar i:hover {
+    color: #80B435;
+}
+
+.navbar i.active,
+.navbar .nav-link.active {
+    color: #80B435;
+    text-decoration: underline;
+}
+
+
+
+.nav-item {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    position: relative;
+}
+
+.navbar .navbar-nav a {
+    padding: 20px;
+}
+
+
+.navbar-brand .brand-text {
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+}
+
+.navbar-brand .brand-text .name {
+    font-weight: bold;
+}
+
+.navbar-brand .brand-text .slogan {
+    font-size: 12px;
+    color: #666;
+}
+
+
+
+
+
+.navbar-icon {
+    font-size: 20px;
+}
+
+.navbar-icon .dropdown-toggle::after {
+    display: none;
+}
+
+.navbar-icon.dropdown:hover .dropdown-menu {
+    display: block;
+    top: 75%;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.navbar-icon .dropdown-menu {
+    display: block;
+    /* Giữ block nhưng không hiện */
+    opacity: 0;
+    left: 1px;
+    visibility: hidden;
+    transform: translateY(1px);
+    transition: all 0.3s ease;
+    /* Hiệu ứng mượt */
+    padding: 0;
+    margin: 0;
+    border-radius: 20px;
+    width: 100px;
+}
+
+.navbar-icon .dropdown-menu li {
+    list-style: none;
+    text-align: center;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    font-size: 16px;
+    color: #1B1A17;
+}
+
+.navbar-icon .dropdown-menu .dropdown-item:hover {
+    background-color: #80B435;
+    color: white;
+    border-radius: 20px;
+}
+
+
+.btn-cart {
+    border-radius: 22px;
+    border: 2px solid rgba(196, 196, 196, 0.50);
+    height: 40px;
+    width: 100px;
+    font-weight: 500;
+    background-color: white;
+}
+
+.btn-cart:hover {
+    background-color: #80B435;
+    color: white;
+}
+
+.sup {
+    position: absolute;
+    top: -10px;
+    right: 10px;
+}
+
+
+#banner {
+    position: relative;
+    width: 100%;
+    height: 850px;
+    /* Chiều cao của banner sẽ là chiều cao màn hình */
+    overflow: hidden;
+}
+
+@media only screen and (max-width: 991px) {
+
+    body>nav>div>button:hover,
+    body>nav>div>button:focus {
+        background-color: #1d1d1d;
+    }
+
+    body>nav>div>button:hover #bar,
+    body>nav>div>button:focus #bar {
+        color: #fff;
+    }
+
+    .navbar .navbar-nav>ul {
+        display: flex;
+        flex-direction: column;
+        margin: 1rem;
+        justify-content: flex-end;
+        align-items: flex-end;
+        text-align: center;
+    }
+
+    .navbar .container {
+        width: 90%;
+        padding: 14px;
+    }
+
+    #navbarNav>ul>li:nth-child(n)>a {
+        padding: 10px 0;
+    }
+
+    #banner-next .content-banner {
+        margin-top: 20px;
+        width: 80%;
+    }
+
+    #banner-next .content-banner h2 {
+        font-size: 36px;
+
+    }
+}
+
+
+
+.banner-content {
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    color: white;
+    z-index: 1;
+    text-align: left;
+}
+
+
+
+
+
+.price {
+    color: #80B435;
+}
+
+#Store {
+    height: 100vh;
+}
+
+/* Swiper Container */
+#banner .swiper-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url(/img/banner/banner1.jpg);
+    background-size: cover;
+}
+
+/* Swiper Slide */
+.swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Banner Content */
+.banner-content {
+    position: absolute;
+    z-index: 10;
+    color: white;
+    text-align: start;
+}
+
+.banner-content p:first-of-type {
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+}
+
+.banner-content h1 {
+    font-size: 96px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.banner-content p:last-of-type {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+}
+.banner-content .text-decoration-line-through {
+    color: #9B9B9B;
+}
+
+
+
+#banner .swiper-controls .swiper-button-prev,
+#banner .swiper-controls .swiper-button-next,
+#banner .swiper-pagination {
+    position: absolute;
+    top: 80%;
+    color: #80B435;
+}
+
+#banner .swiper-pagination-bullet {
+    background-color: #C4C4C4;
+}
+
+#banner .swiper-pagination-bullet-active {
+    background-color: #8EB63E !important;
+}
+
+@media (min-width: 991px) {
+    #banner .swiper-controls .swiper-button-prev {
+        left: 80%;
+    }
+
+    #banner .swiper-controls .swiper-button-next {
+        right: 10%;
+    }
+
+    #banner .swiper-controls .swiper-button-prev::after,
+    #banner .swiper-controls .swiper-button-next::after {
+        border-radius: 10px;
+        background-color: #C4C4C4;
+        padding: 25px;
+        font-size: 16px;
+        height: auto;
+        width: auto;
+        color: #9B9B9B;
+        transition: all 0.3s ease;
+        /* Smooth transition for hover effect */
+    }
+
+    #banner .swiper-controls .swiper-button-prev:hover::after,
+    #banner .swiper-controls .swiper-button-next:hover::after {
+        background-color: #8EB63E;
+        color: #FFFFFF;
+        transform: scale(1.1);
+        box-shadow: 0px 4px 10px rgba(3, 230, 90, 0.2);
+    }
+
+    .icon-container1 {
+        position: absolute;
+        top: 80%;
+        color: #fff;
+    }
+
+}
+
+@media (max-width: 768px) {
+    #banner {
+        height: 547.031px;
+    }
+
+    .banner-content {
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        z-index: 1;
+        text-align: center;
+        background-color: transparent;
+        padding: 20px;
+    }
+
+    .banner-content h1 {
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 500;
+    }
+
+    .banner-content p:first-of-type {
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 600;
+    }
+
+    .banner-content .price {
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 600;
+    }
+
+    .banner-content .text-decoration-line-through {
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 600;
+    }
+
+    #banner .swiper-controls .swiper-button-prev,
+    #banner .swiper-controls .swiper-button-next,
+    #banner .swiper-pagination {
+        position: absolute;
+        top: 70%;
+        color: #80B435;
+    }
+
+}
+
+
+#News .news {
+    position: relative;
+    margin-top: -60px;
+    border-radius: 10px;
+    /* Đẩy lên trên, đè lên section #banner */
+    z-index: 10;
+    /* Đảm bảo phần này nằm trên #banner */
+    background-color: white;
+    /* Đặt màu nền để nhìn rõ */
+    /* Bo góc nếu muốn */
+    box-shadow: 0px -10px 20px rgba(0, 0, 0, 0.1);
+    /* Tạo hiệu ứng nổi */
+    padding: 20px;
+}
+
+#News .news big img {
+    display: block;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1)
+}
+
+#News .news img {
+    border-radius: 20px;
+    width: 100%;
+    height: auto;
+}
+
+
+#News .news .content-big {
+    position: absolute;
+    bottom: 20px;
+    /* Căn từ đáy ảnh lên 20px */
+    right: 20px;
+    /* Căn từ cạnh phải ảnh vào 20px */
+    color: white;
+    /* Chữ màu trắng để nổi bật */
+    padding: 10px 20px;
+    /* Khoảng cách nội dung bên trong */
+    border-radius: 8px;
+    /* Bo tròn các góc */
+    z-index: 2;
+    /* Đảm bảo nội dung nằm trên ảnh */
+}
+
+.position-relative {
+    position: relative;
+}
+
+.content-big h2 {
+    margin: 0;
+    font-size: 18px;
+    /* Tùy chỉnh kích thước chữ */
+    font-weight: bold;
+}
+
+.content-big p {
+    margin: 5px 0 0;
+    /* Khoảng cách phía trên và dưới */
+    font-size: 14px;
+}
+
+.text-color {
+    color: #80B435;
+}
+
+.text-content {
+    color: #FFF;
+    text-align: right;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+#banner-next {
+    width: 100vw;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    margin-top: -10%;
+    margin-bottom: -10%;
+    height: 523px;
+
+}
+
+
+
+.content-banner {
+    position: relative;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#banner-next .content-banner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    background: transparent;
+    padding: 20px;
+}
+
+.banner-next_2 {
+    position: relative;
+    z-index: 1;
+    margin-top: -40px;
+}
+
+
+#News .news .icon {
+    color: #80B435;
+    font-size: 30px;
+}
+
+#News .news .shipping {
+    border-right: 1px solid #C4C4C4;
+}
+
+
+
+#News .news .name-product {
+    color: #222;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+
+
+.icon-user {
+    background-color: #C4C4C480;
+    border-radius: 50%;
+    padding: 10px;
+    color: #000;
+}
+
+
+.icon-text {
+    display: flex;
+}
+
+.icon-text i {
+    font-size: 18px;
+    /* Tùy chỉnh kích thước icon */
+}
+
+.icon-text span {
+    display: flex;
+    flex-direction: column;
+    /* Căn text thành 2 dòng theo chiều dọc */
+}
+
+.icon-text span h4,
+.icon-text span p {
+    margin: 0;
+    /* Bỏ khoảng cách mặc định của thẻ */
+    color: #000;
+}
+
+.icon-text span h4 {
+    font-size: 14px;
+
+}
+
+.icon-text span p {
+    font-size: 12px;
+}
+
+.icon-user {
+    position: relative;
+    width: 45px;
+    height: 45px;
+}
+
+.icon-user i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+
+#Services .services_content {
+    position: relative;
+    z-index: 10;
+    margin-top: -40px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px -10px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+
+}
+
+
+
+
+#Services .services_content img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+
+
+.mail {
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid #C4C4C4;
+}
+
+.mail:focus {
+    outline: none;
+    color: #000;
+}
+
+.btn-2 {
+    margin-top: 30px;
+    border-radius: 20px;
+    background-color: white;
+    border: 1px solid #C4C4C4;
+    padding: 10px;
+    width: 140px;
+}
+
+.btn-2:hover {
+    background-color: #80B435;
+    color: white;
+}
+
+#footer {
+    position: relative;
+    z-index: 1;
+    margin-top: -40px;
+    background-color: #222222;
+}
+
+
+#footer .container {
+    background-color: #222222;
+    color: white;
+}
+
+.footer-bottom {
+    border-top: 1px solid #C4C4C4;
+}
+
+#banner-detail {
+    height: 150px;
+}
+
+.active-page {
+    color: #8EB63E;
+    font-size: 24px;
+    font-weight: 500;
+}
